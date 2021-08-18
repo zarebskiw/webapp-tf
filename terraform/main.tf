@@ -27,7 +27,7 @@ resource "azurerm_app_service_plan" "sp1" {
   name                = "spflolie4123"
   location            = data.azurerm_resource_group.wsdevops.location
   resource_group_name = data.azurerm_resource_group.wsdevops.name
-
+  
   sku {
     tier = "Standard"
     size = "S1"
@@ -41,7 +41,7 @@ resource "azurerm_app_service" "website" {
   app_service_plan_id = azurerm_app_service_plan.sp1.id
 
   site_config {
-    linux_fx_version = "NODE|10-lts"
+    windows_fx_version = "NODE|10-lts"
     scm_type         = "LocalGit"
   }
 }

@@ -41,7 +41,7 @@ resource "azurerm_app_service" "website" {
   app_service_plan_id = azurerm_app_service_plan.sp1.id
 
   site_config {
-    dotnet_framework_version = "v4.0"
+    linux_fx_version = "NODE|10-lts"
     scm_type                 = "LocalGit"
   }
 }

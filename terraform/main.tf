@@ -42,7 +42,7 @@ resource "azurerm_app_service" "website" {
 
   site_config {
     linux_fx_version = "NODE|10-lts"
-    scm_type                 = "LocalGit"
+    scm_type         = "LocalGit"
   }
 }
 

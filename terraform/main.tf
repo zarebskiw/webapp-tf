@@ -42,7 +42,7 @@ resource "azurerm_app_service" "website" {
 
   site_config {
     dotnet_framework_version = "v4.0"
-    scm_type                 = "ExternalGit"
+    scm_type                 = "LocalGit"
   }
 }
 

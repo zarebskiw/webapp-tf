@@ -52,6 +52,8 @@ jobs:
         tf_actions_subcommand: 'plan'
         tf_actions_working_dir: "./terraform"
  
+  terraformapply:
+    needs: [terraform]
     - name: Terraform Apply
       uses: hashicorp/terraform-github-actions@master
       with:

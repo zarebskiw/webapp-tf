@@ -8,15 +8,13 @@ terraform {
 }
 
 provider "azurerm" {
-  # The "feature" block is required for AzureRM provider 2.x.
-  # If you're using version 1.x, the "features" block is not allowed.
   features {}
 }
 
-data "azurerm_client_config" "current" {}
+# data "azurerm_client_config" "current" {}
 
 
-#Create Get resource group
+#Get resource group
 data "azurerm_resource_group" "wsdevops" {
   name = "ws-devops"
 }
@@ -48,5 +46,4 @@ resource "azurerm_app_service" "website" {
   }
 }
 
-#create webapp
 

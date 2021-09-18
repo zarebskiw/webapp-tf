@@ -2,7 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=2.46.0"
+      version = "=2.76.0"
     }
   }
 
@@ -82,7 +82,7 @@ resource "null_resource" "link_monitoring" {
       con_client_secret = var.client_secret
       con_tenant_id     = var.tenant_id
       // Parameters needed for linking
-      inst_key          = var.azurerm_application_insights.appi.instrumentation_key
+      inst_key          = azurerm_application_insights.appi.instrumentation_key
       rg_name           = data.azurerm_resource_group.wsdevops.name
       web_app_name      = var.web_app_name
     }
